@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>TECHDRIVE</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Підключення файлу стилів -->
+</head>
+<body style="font-family: 'Times New Roman', Times, serif;">
+
+    <header class="header">
+        <div class="welcome-message">
+            <img src="images/emblem.jpg.png" alt="Emblem of TechDrive" style="width: 350px; height: auto;">
+            <h1>Ласкаво просимо в автосалон "TechDrive"</h1>
+            <p>Ваш сучасний та надійний партнер у світі автомобілів</p>
+            <!-- Привітальне повідомлення -->
+        </div>
+        <div class="about-us-section section">
+            <h2>Про нас</h2>
+            <p>Автосалон "TechDrive" пропонує найновіші та найсучасніші автомобілі від провідних світових брендів.</p>
+            <p>Ми спеціалізуємося на наданні високоякісних послуг та забезпеченні надійних транспортних засобів для наших клієнтів.</p>
+             <!-- Інформація про компанію -->
+        </div>
+    </header>
+
+    <nav>
+        <a href="#" onclick="resetView()">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAARtJREFUSEvt1tsNwjAMBVB3E5gE2AQmASaBTYBJYBPIleLKFDex3aD+ND9ItPXJw07S0Uytm8mlKfCKiLZEdI10PgpfiGifwXP6PXnxCCxR9ty4F5boK6uYcjQX7oGH6CFNN/BbWmc3boU19C5G7MYtcAnlNcaIXXgNtqAhvAR7UDc+BkdQF67BU1AzrsHv/DVKBSXD2evdnIYJt5OxhjD2XmQnGtDQPix6KOOZ4a8XvcPN7zeDcRhsRjrxUA6LJjCWAIFKDUuDJeLWBJZJxweEzGIkE/5f/wvWTiEswTGDMmGbjniBMcPLVLvLCSXxDO5Stc9QZn0Z1k6nWjDrcxw02IL7psF8UecLnDV46b2fe3ft6tMCVWPMBn8A24d7HzU0oKIAAAAASUVORK5CYII="/>
+            <!-- Кнопка для скидання вигляду -->
+        </a>
+        <a href="#" onclick="showCars('bmw')">BMW</a>
+        <a href="#" onclick="showCars('audi')">Audi</a>
+        <a href="#" onclick="showCars('mercedes')">Mercedes</a>
+        <a href="#" onclick="showSpecialOffers()">Спеціальні пропозиції</a>
+        <a href="#" onclick="showContact()">Контакти</a>
+        <a href="#" onclick="showEmployees()">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAUFJREFUSEvNlmESwUAMRuMmnAQ34SQ4CU6Ck+Ak9M3smtrubrLEVGY6frTyki9fN53ISDEZiSufgqcisuquW7jOrQ20ggHuRWSRgChgGYow1dACBnaqZAW+7ooydd8CBpp2mtYBfGZp2QpmnkhsCSRXu7aCtyKysVBFZNc9x/PV+AX4EGbtAtaM1YdgMOAuYF6jq5Ys3MdcmMwFTBKLwUzGIpl1xrH6mslMpoqJWsH8D9mZ+TwkuYeZqvL2tf8ErI3PdP/vwVFefqPEaWdIfbFuK63j0jbS5OQ9xmzFudfALYdGrhCgx9LxWQJ/C42FFFdlCWxZgZrcffhgVebALZvICh+c3zkwe5fj0TPYzxynr8iBWQa42TMGXyY58MOT2Mv1tkBSsJebc7VXwUjsLXMs4u07TDu5fqR6+z52K2S0jp8qNTYfcSiZaQAAAABJRU5ErkJggg==" alt="Employees"/>
+            <!-- Кнопка для перегляду працівників -->
+        </a>
+    </nav>
+
+    <div id="carSection" class="car-info-container"></div>
+    <!-- Контейнер для інформації про автомобілі -->
+
+    <section id="specialOffers" class="special-offers" style="display: none">
+        <h2>Найкращі пропозиції цього місяця</h2>
+        <div class="special-offer">
+            <img src="images/new_offer1.jpg.jpg" alt="Нова спеціальна пропозиція 1"/>
+            <p>Спеціальні ціни на зимову резину - готуйте свій автомобіль до зими!</p>
+        </div>
+        <div class="special-offer">
+            <img src="images/new_offer2.jpg.jfif" alt="Нова спеціальна пропозиція 2"/>
+            <p>Отримайте повний комплекс тюнінгу для вашого автомобіля:</p>
+        </div>
+        <!-- Спеціальні пропозиції -->
+    </section>
+
+    <section id="contact" class="contact" style="display: none">
+        <div class="contact-info">
+            <h2>Контакти</h2>
+            <div class="contact-details">
+                <p>Ми завжди раді відповісти на ваші питання. Зв'яжіться з нами:</p>
+                <p>Email: <a href="mailto:info@techdrive-auto.com">info@techdrive-auto.com</a></p>
+                <p>Телефон: +380 (777) 777-777</p>
+            </div>
+            <!-- Інформація для зв'язку -->
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <p>Ваші контактні дані:</p>
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" id="name" name="name" required />
+                <label for="email">Ваш email:</label>
+                <input type="email" id="email" name="email" required />
+                <label for="message">Ваше повідомлення:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Надіслати</button>
+            </div>
+            <!-- Форма для контакту -->
+        </div>
+    </section>
+
+    <section id="employees" class="employees" style="display: none">
+        <h2>👑 Наші працівники 👑</h2>
+        <div class="employee">
+            <img src="images/director.jpg.JPG" alt="Директор">
+            <h3>Нескреба Микита</h3>
+            <p>Директор</p>
+            <p>Микита керує автосалоном з 2020 року. Він має багаторічний досвід в автомобільній індустрії. Крім того, Микита активно бере участь у розвитку нових проектів та інноваційних рішень у сфері автомобільних послуг. У вільний час він захоплюється автоспортом та організовує благодійні акції для підтримки місцевої громади.</p>
+        </div>
+        <div class="employee">
+            <img src="images/manager.jpg.jfif" alt="Менеджер">
+            <h3>Калашникова Катерина</h3>
+            <p>Менеджер</p>
+            <p>Катерина відповідає за обслуговування клієнтів і допомагає з вибором найкращих автомобілів. Вона має відмінні комунікативні навички та здатність знайти індивідуальний підхід до кожного клієнта. Катерина також є сертифікованим спеціалістом з фінансового консультування, що дозволяє їй допомагати клієнтам з оптимізацією бюджету при купівлі автомобіля. У вільний час вона захоплюється фотографуванням та подорожами.
+            </p>
+        </div>
+        <div class="employee">
+            <img src="images/admin.jpg.jpg" alt="Адміністратор">
+            <h3>Петренко Віктор</h3>
+            <p>Адміністратор</p>
+            <p>Віктор забезпечує гладку роботу автосалону і координує всі адміністративні питання. Він має значний досвід у сфері управління та організації бізнес-процесів. Віктор також займається впровадженням нових технологій для покращення ефективності роботи автосалону. У вільний час він захоплюється програмуванням та розробкою мобільних додатків.</p>
+        </div>
+        <!-- Інформація про працівників -->
+    </section>
+
+    <div id="spacer" style="height: 60px;"></div>
+    <footer>
+        <p>&copy; Автосалон  2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Підключення файлу скриптів -->
+
+</body>
+</html>

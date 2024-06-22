@@ -1,0 +1,531 @@
+/* Основні стилі для тіла сторінки */
+body {
+	font-family: 'Times New Roman', serif;
+	margin: 0;
+	padding: 0;
+	color: #333;
+	background-color: rgb(0 0 0 / 80%);
+	transition: background-color 0.3s;
+	padding-bottom: 60px;
+}
+
+/* Обнулення відступів та висоти для тіла та HTML документа */
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+/* Основні стилі для секцій */
+section {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+}
+
+/* Вирівнювання тексту по центру для деяких секцій */
+nav,
+header,
+.about-us,
+.special-offers,
+.contact {
+	text-align: center;
+}
+
+/* Основні стилі для навігації */
+nav {
+    padding: 10px 0;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+ /* Стилі для посилань в навігації */
+nav a {
+    display: inline-block;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 5px;
+    color: #000000; 
+    background-color: rgb(254, 254, 254, 0.64); 
+}
+
+/* Стилі при наведенні на посилання */
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #fff; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Стилі при активації посилання */
+nav a:active {
+    background-color: #fff; 
+    color: #000; 
+}
+
+/* Стилі для зображень в посиланнях */
+nav a img {
+    vertical-align: middle;
+    height: 16px;
+    transition: filter 0.3s;
+}
+
+/* Зміна кольору зображення при наведенні */
+nav a:hover img {
+    filter: invert(1);
+}
+
+/* Зміна кольору зображення при активації */
+nav a:active img {
+    filter: invert(0);
+}
+
+@media screen and (max-width: 768px) {
+	/* Стилі для навігації на мобільних пристроях */
+    nav {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 20px 0; 
+    }
+
+    /* Стилі для посилань на мобільних пристроях */
+    nav a {
+        margin: 10px 0; 
+        width: 80%; 
+        max-width: 300px; 
+        padding: 12px 20px; 
+    }
+}
+
+/* Стилі для привітального повідомлення */
+.welcome-message {
+	text-align: center;
+	padding: 50px 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+}
+
+/* Стилі для заголовка привітального повідомлення */
+.welcome-message h1 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+/* Стилі для тексту привітального повідомлення */
+.welcome-message p {
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+/* Стилі для секції "Про нас" */
+.about-us-section {
+	padding: 30px;
+	background-color: #fff;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+/* Стилі для заголовка секції "Про нас" */
+.about-us-section h2 {
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 15px;
+}
+
+/* Стилі для тексту секції "Про нас" */
+.about-us-section p {
+	font-size: 16px;
+	color: #1c1c1c;
+	line-height: 1.6;
+	margin-bottom: 15px;
+}
+
+/* Стилі для хедера */
+.header {
+	padding-block: 0rem;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/image.jpg.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+/* Стилі для подвалу */
+footer {
+    left: 0;
+    right: 0;
+    background-color: #1c1c1c;
+    color: #fff;
+    text-align: center;
+	box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+}
+
+/* Стилі для загальних секцій */
+.section {
+	padding: 30px;
+	background-color: rgb(255 255 255 / 70%);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s;
+}
+
+/* Стилі для заголовків загальних секцій */
+.section h2 {
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 15px;
+}
+
+/* Ефекти при наведенні на загальні секції */
+.section:hover {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+}
+
+/* Ефекти при наведенні на елементи з класом hover-effect */
+.hover-effect:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Стилі для контейнера інформації про автомобілі */
+.car-info-container {
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+/* Стилі для контейнера машин */
+.car-info {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+/* Стилі для кожного автомобіля */
+.car {
+    position: center;
+    border-radius: 8px;
+    width: 280px;
+    height: 385px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 10px; 
+    display: inline-block; 
+
+}
+
+/* Стилі для зображень автомобілів */
+.car img {
+	width: 280px;
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 8px 8px 0 0;
+	transition: transform 0.3s;
+}
+
+/* Стилі для деталей автомобілів */
+.car-details {
+	padding: 15px;
+	background-color: #1c1c1c;
+	border-radius: 0 0 8px 8px;
+	margin-top: -1px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/* Стилі для заголовків та тексту автомобілів */
+.car h3,
+.car p {
+	color: #fff;
+	margin: 0;
+}
+
+/* Стилі для заголовків автомобілів */
+.car h3 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+/* Стилі для тексту автомобілів */
+.car p {
+	font-size: 16px;
+	margin-bottom: 8px;
+}
+
+/* Стилі для останнього абзацу тексту автомобілів */
+.car p:last-child {
+	margin-bottom: 0;
+}
+
+/* Ефекти при наведенні на автомобілі */
+.car:hover {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	transform: scale(1.05);
+}
+
+/* Відступи для розділу "Автомобілі" */
+#carSection {
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+/* Стилі для розділу "Спеціальні пропозиції" */
+.special-offers {
+	max-width: 650px;
+	margin: 20px auto;
+	border-radius: 12px;
+	padding: 30px;
+}
+
+/* Стилі для заголовка розділу "Спеціальні пропозиції" */
+.special-offers h2 {
+	font-size: 28px;
+	color: #ffffff;
+	margin-bottom: 20px;
+}
+
+/* Стилі для кожної спеціальної пропозиції */
+.special-offer {
+	background-color: #1c1c1c;
+	padding: 10px;
+	border-radius: 8px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+	transition: box-shadow 0.3s;
+}
+
+/* Ефекти при наведенні на спеціальні пропозиції */
+.special-offer:hover {
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.special-offer img {
+	width: 100%;
+	object-fit: cover;
+	border-radius: 8px 8px 8px 8px;
+	transition: transform 0.3s;
+}
+
+/* Стилі для тексту спеціальних пропозицій */
+.special-offer p {
+	font-size: 16px;
+	color: #ffffff;
+	line-height: 1.6;
+	margin-bottom: 15px;
+}
+
+/* Ефекти при наведенні на спеціальні пропозиції */
+.special-offer img:hover {
+	transform: scale(1.05);
+}
+
+/* Стилі для розділу "Контакти" */
+.contact {
+	background-color: #f9f9f9;
+	padding: 40px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилі для заголовка розділу "Контакти" */
+.contact h2 {
+	font-size: 32px;
+	color: #1c1c1c;
+	margin-bottom: 30px;
+}
+
+ /* Стилі для контактного контейнера */
+.contact-wrapper {
+	background-color: #f9f9f9;
+	border-radius: 12px;
+	padding: 40px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилі для контейнера інформації про контакти */
+.contact-info-container {
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Стилі для тексту в контактах */
+.contact p {
+	font-size: 20px;
+	color: #333;
+	line-height: 1.8;
+	margin-bottom: 20px;
+}
+
+/* Стилі для форми контакту */
+.contact-container {
+	padding: 20px;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+	max-width: 400px;
+	margin-top: 20px;
+	margin: auto;
+	background-color: #f0f0f0;
+	padding: 30px;
+	border: 1px solid #ccc;
+	border-radius: 0;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилі для інформації про контакти */
+.contact-info {
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items
+
+: center;
+	text-align: center;
+}
+
+/* Стилі для деталей контактів */
+.contact-details {
+	margin-bottom: 20px;
+	max-width: 400px;
+	margin: auto;
+	background-color: #f9f9f9;
+	border-radius: 12px;
+	padding: 20px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилі для тексту в деталях контактів */
+.contact-details p {
+	font-size: 18px;
+	color: #333;
+	margin: 8px 0;
+}
+
+/* Стилі для тексту в інформації про контакти */
+.contact-info p {
+	margin: 8px 0;
+}
+
+/* Стилі для контактної форми */
+.contact-form {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Стилі для підписів в контактній формі */
+.contact-form label {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+/* Стилі для полів введення в контактній формі */
+.contact-form input,
+.contact-form textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+/* Стилі для кнопки в контактній формі */
+.contact-form button {
+	background-color: #1c1c1c;
+	color: #fff;
+	padding: 12px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+/* Ефекти при наведенні на кнопку в контактній формі */
+.contact-form button:hover {
+	background-color: #333;
+	color: #fff;
+}
+
+/* Стилі для розділу співробітників */
+.employees {
+    padding: 30px;
+    background-color: #f1f1f1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Стилі для заголовка розділу співробітників */
+.employees h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+/* Стилі для кожного співробітника */
+.employee {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    display: inline-block;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+/* Стилі для зображень співробітників */
+.employee img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Стилі для заголовків співробітників */
+.employee h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+/* Стилі для тексту співробітників */
+.employee p {
+    font-size: 16px;
+    color: #090000;
+}
+
+/* Адаптивні стилі для заголовків розділу співробітників */
+@media (max-width: 768px) {
+    .employees h2 {
+        width: 100%; 
+        font-size: 18px; 
+    }
+ 
+	/* Адаптивні стилі для співробітників */
+    .employee {
+        width: 45%; 
+        margin: 10px auto; 
+    }
+}
+
+/* Адаптивні стилі для співробітників на маленьких екранах */
+@media (max-width: 480px) {
+    .employee {
+        width: 90%; 
+        margin: 10px auto; 
+    }
+}
